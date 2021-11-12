@@ -1,0 +1,27 @@
+<div id="gallery-container" class="container-fluid bg-dark text-white section-py--large">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-6 text-center">
+            <h1 class="mb-4 font-weight-bold" data-scroll-animate="fadeInDown">Gallery</h1>
+            <p data-scroll-animate="fadeInUp">We have wonderful pirates ready for adventures.</p>
+            <div class="lana-hr lana-hr-4 border-primary mt-4" data-scroll-animate="zoomIn"></div>
+        </div>
+    </div>
+    <div class="row text-center my-5 mfp-gallery">
+        <div *ngFor="let card of cards" class="col-12 col-sm-6 col-lg-4 my-3">
+            <a href="{{card.image}}" class="lana-img-overlay image-link text-white"
+               data-scroll-animate="comeInRight">
+                <img src="{{card.thumbnail}}" class="mfp-image img-fluid" alt="Pet">
+                <div class="container overlay-content">
+                    <div class="row h-100">
+                        <div class="col-12 align-self-end p-5">
+                            <div class="d-flex justify-content-between">
+                                <span class="title h3">{{card.title}}</span>
+                                <i class="fas fa-search-plus fa-2x align-middle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

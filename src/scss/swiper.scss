@@ -1,0 +1,17 @@
+// load bootstrap
+@import "bootstrap/variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/variables";
+
+// variables
+$themeLightGrayColor: $gray-200;
+$themeDarkGrayColor: $gray-400;
+$themeColor: $primary;
+
+// load swiper
+@import 'swiper/scss';
+@import "swiper/core";
+@import "swiper/effect-fade";
+@import "swiper/navigation";
+@import "swiper/pagination";

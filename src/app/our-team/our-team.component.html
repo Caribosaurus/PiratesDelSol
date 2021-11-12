@@ -1,0 +1,46 @@
+<div id="our-team-container" class="container-fluid bg-light-blue section-py--large">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-6 text-center">
+                <h1 class="mb-4 font-weight-bold" data-scroll-animate="fadeInDown">Meet Our Team</h1>
+                <p data-scroll-animate="fadeInUp">
+                    We have a team that takes care about pets, help then find new family. We treat and domesticate
+                    pets.
+                </p>
+                <div class="lana-hr lana-hr-4 border-primary mt-4" data-scroll-animate="zoomIn"></div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div *ngFor="let member of teamMembers" class="col-12 col-md-4 col-lg-4">
+                <div class="lana_member type-lana_member card member-card bg-transparent">
+                    <div class="card-body">
+                        <img src={{member.image}}
+                             class="card-img-top img-fluid rounded-circle" alt="Team Member"
+                             data-scroll-animate="zoomIn">
+                        <h5 class="post-title card-title" data-scroll-animate="fadeInDown">
+                            {{member.name}}
+                        </h5>
+                        <h6 class="card-subtitle" data-scroll-animate="fadeInUp">
+                            {{member.role}}
+                        </h6>
+                        <p class="post-text card-text" data-scroll-animate="fadeIn">
+                            {{member.description}}
+                        </p>
+                        <ul class="social-icons list-inline" data-scroll-animate="fadeInUp" *ngIf="member.socials">
+                            <li class="list-inline-item" *ngIf="member.socials.facebook">
+                                <a href={{member.socials.facebook}} class="social-icon"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item" *ngIf="member.socials.twitter">
+                                <a href={{member.socials.twitter}} class="social-icon"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item" *ngIf="member.socials.linkedin">
+                                <a href={{member.socials.linkedin}} class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

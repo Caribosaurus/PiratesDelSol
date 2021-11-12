@@ -1,0 +1,8 @@
+// font awesome overwrite
+$fa-font-path: "../fonts";
+
+// load font awesome
+@import "scss/font-awesome/fontawesome";
+@import "scss/font-awesome/brands";
+@import "scss/font-awesome/regular";
+@import "scss/font-awesome/solid";
