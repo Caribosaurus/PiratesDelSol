@@ -7,7 +7,7 @@
 
   // margin mobile optimization
   @include media-breakpoint-down(sm) {
-    margin: ($grid-gutter-width/2);
+    margin: math.div($grid-gutter-width,2);
   }
 
   // slide
@@ -18,22 +18,22 @@
   // prev
   .swiper-button-prev {
     margin-top: -($spacer * 1.5);
-    left: -($grid-gutter-width/3);
+    left: -(math.div($grid-gutter-width,3));
   }
 
   &.swiper-container-rtl .swiper-button-prev {
     left: auto;
-    right: -($grid-gutter-width/3);
+    right: -(math.div($grid-gutter-width,3));
   }
 
   // next
   .swiper-button-next {
     margin-top: -($spacer * 1.5);
-    right: -($grid-gutter-width/3);
+    right: -(math.div($grid-gutter-width,3));
   }
 
   &.swiper-container-rtl .swiper-button-next {
-    left: -($grid-gutter-width/3);
+    left: -(math.div($grid-gutter-width,3));
     right: auto;
   }
 
@@ -46,8 +46,8 @@
   &.swiper-visible-items {
     margin-left: 0;
     margin-right: 0;
-    padding-left: ($grid-gutter-width/2);
-    padding-right: ($grid-gutter-width/2);
+    padding-left: math.div($grid-gutter-width,2);
+    padding-right: math.div($grid-gutter-width,2);
 
     // slide
     .swiper-slide {

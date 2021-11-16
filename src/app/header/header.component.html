@@ -12,6 +12,15 @@
                 </li>
             </ul>
         </div>
+        <div class="button-nav-widget d-none d-xl-inline-flex">
+            <ul class="nav button-nav">
+                <li class="nav-item">
+                    <button (click)="onLogin()" class="btn btn-sm btn-primary text-uppercase font-weight-bold my-auto" *ngIf="!(currentUser | async)">
+                    Connect {{environment}} wallet
+                    </button>
+                </li>
+            </ul>
+        </div>
     </nav>
     
     <div class="container-fluid text-white mt-auto py-5">
