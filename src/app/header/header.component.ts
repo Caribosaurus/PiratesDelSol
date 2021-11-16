@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { AuthenticationService } from '../login.service';
 import { User } from '../models/user';
@@ -23,8 +23,12 @@ export class HeaderComponent implements OnInit {
   }
 
   async onLogin(): Promise<void> {
-    this.authenticationService.connect().subscribe(x => {
-      console.log(x)});
+    this.authenticationService.connect().pipe(
+      catchError((err:TypeError) => {
+        window.open("https://phantom.app/", "_blank");
+        return of(undefined);
+      })
+    ).subscribe();
   }
 
 }

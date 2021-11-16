@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, from, Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { BehaviorSubject, from, Observable, of } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
 import { User } from './models/user';
 
 
@@ -20,19 +20,30 @@ export class AuthenticationService {
     }
 
     private get solana(): any {
-      return (window as any).solana;
+      let _window = window as any;
+      if (_window.solana){
+        return _window.solana;
+      }
+      
+    }
+
+    private connect_solana_wallet(): Promise<any> {
+      if (this.solana){
+        return this.solana.connect();
+      }
+      return Promise.reject(new TypeError("Phantom not installed"))
     }
 
     connect(): Observable<User> {
-        return from(this.solana.connect()).pipe(
+        return from(this.connect_solana_wallet()).pipe(
           map((login:any) => {
             const user =  {
               address: login.publicKey.toString() as string
             };
             this.currentUserSubject.next(user);
             return user;
-            }
-          ));
+            })
+          );
     }
 
     logout() {
