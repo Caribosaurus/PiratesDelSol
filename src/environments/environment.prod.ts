@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  env: 'prod'
+  env: 'prod',
+  discordCallbackUrl:'https://piratesdelsol.com'
 };
