@@ -1,27 +1,6 @@
 <header class="header bg-dark lana-full-bg-image-golden-large-sitting-dog-body-indoor d-flex flex-column"
         id="slider-header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent" id="lana-pet-main-navbar">
-        <a class="navbar-brand" href="/">
-            <img class="navbar-logo" src="/assets/Logo_skull_couleurs.png" alt="Navbar Logo" width="100">
-        </a>
-
-        <div class="collapse navbar-collapse" id="lana-navbar">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/">Home</a>
-                </li>
-            </ul>
-        </div>
-        <div class="button-nav-widget d-none d-xl-inline-flex">
-            <ul class="nav button-nav">
-                <li class="nav-item">
-                    <button (click)="onLogin()" class="btn btn-sm btn-primary text-uppercase font-weight-bold my-auto" *ngIf="!(currentUser | async)">
-                    Connect {{environment}} wallet
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <app-navbar></app-navbar>
     
     <div class="container-fluid text-white mt-auto py-5">
         <div class="row">
@@ -39,11 +18,11 @@
                                 </div>
                                 <div class="card-footer">
                                     <p class="card-text">
-                                        <a href="#"
+                                        <a href="#offering-container"
                                            class="btn btn-primary btn-lg text-uppercase font-weight-bold mr-3 mb-3 w-15x">
                                             Find Out Now
                                         </a>
-                                        <a href="#"
+                                        <a href="https://mint.piratesdelsol.com/"
                                            class="btn btn-outline-primary btn-lg text-white text-uppercase font-weight-bold mb-3 w-15x">
                                             Mint a Pirate
                                         </a>

@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent" id="lana-pet-main-navbar">
+    <a class="navbar-brand" href="/">
+        <img class="navbar-logo" src="/assets/Logo_skull_couleurs.png" alt="Navbar Logo" width="100">
+    </a>
+
+    <div class="collapse navbar-collapse" id="lana-navbar">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link active" href="/">Home</a>
+            </li>
+        </ul>
+    </div>
+    <div class="button-nav-widget d-none d-xl-inline-flex">
+        <ul class="nav button-nav">
+            <li class="nav-item">
+                <button (click)="onLogin()" class="btn btn-sm btn-primary text-uppercase font-weight-bold my-auto" *ngIf="!(currentUser | async)">
+                Connect {{environment}} wallet
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>

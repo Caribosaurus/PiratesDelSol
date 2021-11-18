@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoadmapComponent implements OnInit {
   roadmapItems: Array<any> = [
-    {title:'we do the things'},
-    {title:'we sell the things'},
-    {title:'we sell more things'},
-    {title:'we more of the things'},
-    {title:'we more, but even of the things'},
+    {title:'we do the things', image:'/assets/img/zoltan-tasi.jpg'},
+    {title:'we sell the things', image:'/assets/img/zoltan-tasi.jpg'},
+    {title:'we sell more things', image:'/assets/img/zoltan-tasi.jpg'},
+    {title:'we more of the things', image:'/assets/img/zoltan-tasi.jpg'},
+    {title:'we more, but even of the things', image:'/assets/img/zoltan-tasi.jpg'},
   ] 
 
   constructor() { }

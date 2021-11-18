@@ -10,6 +10,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { RoadmapComponent } from './roadmap/roadmap.component';
 import { OfferingComponent } from './offering/offering.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     GalleryComponent,
     RoadmapComponent,
     OfferingComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

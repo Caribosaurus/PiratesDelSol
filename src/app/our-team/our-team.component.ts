@@ -9,10 +9,10 @@ export class OurTeamComponent implements OnInit {
 
   teamMembers: Array<any> = [
     {
-      name: "Natalia Scrilsen",
-      role: "Vaterian",
-      description:"Quisque sit amet ex id lacus ullamcorper consectetur. Phasellus cursus arcu quam, vel porttitor magna efficitur ac.",
-      image: "/assets/pictures/placeholder/250x250.svg",
+      name: "Caribosaurus",
+      role: "Computer Magician",
+      description:'"I love pizza"',
+      image: "https://www.espree.com/sites/default/files/2019-10/Samoyed.png",
       socials: {
         facebook: "https://facebook.com",
         twitter: "",
@@ -20,8 +20,8 @@ export class OurTeamComponent implements OnInit {
       }
     },
     {
-      name: "Natalia Scrilsen",
-      role: "Vaterian",
+      name: "Reshiram",
+      role: "Founder",
       description:"Quisque sit amet ex id lacus ullamcorper consectetur. Phasellus cursus arcu quam, vel porttitor magna efficitur ac.",
       image: "/assets/pictures/placeholder/250x250.svg",
       socials: {
@@ -31,8 +31,8 @@ export class OurTeamComponent implements OnInit {
       }
     },
     {
-      name: "Natalia Scrilsen",
-      role: "Vaterian",
+      name: "Gregov",
+      role: "Artist",
       description:"Quisque sit amet ex id lacus ullamcorper consectetur. Phasellus cursus arcu quam, vel porttitor magna efficitur ac.",
       image: "/assets/pictures/placeholder/250x250.svg",
       socials: {

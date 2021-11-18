@@ -9,9 +9,9 @@ export class GalleryComponent implements OnInit {
 
   cards:Array<any> = [
     {
-      image: "/assets/pictures/placeholder/1920x1080.svg",
-      thumbnail:"/assets/pictures/placeholder/640x430.svg",
-      title: "Jumbo"
+      image: "/assets/img/johnny-depp-pirates.jpg",
+      thumbnail:"/assets/img/johnny-depp-pirates.jpg",
+      title: "Johnny"
     },
     {
       image: "/assets/pictures/placeholder/1920x1080.svg",
