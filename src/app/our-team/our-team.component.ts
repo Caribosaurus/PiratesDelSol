@@ -52,6 +52,39 @@ export class OurTeamComponent implements OnInit {
         linkedin: ""
       }
     },
+    {
+      name: "Natalia Scrilsen",
+      role: "Vaterian",
+      description:"Quisque sit amet ex id lacus ullamcorper consectetur. Phasellus cursus arcu quam, vel porttitor magna efficitur ac.",
+      image: "/assets/pictures/placeholder/250x250.svg",
+      socials: {
+        facebook: "https://facebook.com",
+        twitter: "",
+        linkedin: ""
+      }
+    },
+    {
+      name: "Natalia Scrilsen",
+      role: "Vaterian",
+      description:"Quisque sit amet ex id lacus ullamcorper consectetur. Phasellus cursus arcu quam, vel porttitor magna efficitur ac.",
+      image: "/assets/pictures/placeholder/250x250.svg",
+      socials: {
+        facebook: "https://facebook.com",
+        twitter: "",
+        linkedin: ""
+      }
+    },
+    {
+      name: "Natalia Scrilsen",
+      role: "Vaterian",
+      description:"Quisque sit amet ex id lacus ullamcorper consectetur. Phasellus cursus arcu quam, vel porttitor magna efficitur ac.",
+      image: "/assets/pictures/placeholder/250x250.svg",
+      socials: {
+        facebook: "https://facebook.com",
+        twitter: "",
+        linkedin: ""
+      }
+    },
   ]
 
   constructor() { }

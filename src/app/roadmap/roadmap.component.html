@@ -7,12 +7,9 @@
                 <div class="lana-hr lana-hr-4 border-primary mt-4" data-scroll-animate="zoomIn"></div>
             </div>
         </div>
-        <div class="row mt-5">
-            <div class="col-12 px-0">
-                <div class="pets-carousel swiper-container swiper-container-items h-100">
-                    <div class="swiper-wrapper">
-                        <div *ngFor="let item of roadmapItems" class="swiper-slide">
-                            <div class="lana_pet type-lana_pet card pet-grid-card mx-0 mx-md-3 h-100"
+        <div class="row mt-5 justify-content-center mfp-gallery">
+                        <div *ngFor="let item of roadmapItems" class="col-12 col-sm-6 col-lg-4 py-4 py-lg-0">
+                            <div class="lana_pet type-lana_pet card pet-grid-card"
                                 data-scroll-animate="fadeIn">
                                 <div class="lana-img-zoom">
                                     <img src={{item.image}} class="card-img-top img-fluid"
@@ -23,29 +20,15 @@
                                         {{item.title}}
                                     </h5>
                                     <p class="post-text card-text">
-                                        Ut eu tempor lectus. Nulla odio nisl, dictum id facilisis et, luctus varius
-                                        nisi. Aliquam eu nisl sit amet diam convallis commodo.
+                                        {{item.description}}
                                     </p>
                                 </div>
                                 <div class="card-footer">
                                     <p class="card-text">
-                                        <a href="#" class="more-link card-link">
-                                            Learn More <i class="lana-icon-arrow-right text-primary"></i>
-                                        </a>
+                                        {{item.date}}
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                        <div class="swiper-pagination" data-scroll-animate="fadeInDown"></div>
-                        <div class="swiper-button-next swiper-button-arrow" data-scroll-animate="fadeInLeft"></div>
-                        <div class="swiper-button-prev swiper-button-arrow" data-scroll-animate="fadeInRight"></div>
-                </div>
             </div>
         </div>
-    </div>
-
-
-    <div class="swiper-slide">
-
     </div>
