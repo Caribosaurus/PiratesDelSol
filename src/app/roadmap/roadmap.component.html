@@ -8,27 +8,25 @@
             </div>
         </div>
         <div class="row mt-5 justify-content-center mfp-gallery">
-                        <div *ngFor="let item of roadmapItems" class="col-12 col-sm-6 col-lg-4 py-4 py-lg-0">
-                            <div class="lana_pet type-lana_pet card pet-grid-card"
-                                data-scroll-animate="fadeIn">
-                                <div class="lana-img-zoom">
-                                    <img src={{item.image}} class="card-img-top img-fluid"
-                                        alt="Pet">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="post-title card-title">
-                                        {{item.title}}
-                                    </h5>
-                                    <p class="post-text card-text">
-                                        {{item.description}}
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <p class="card-text">
-                                        {{item.date}}
-                                    </p>
-                                </div>
-                            </div>
+            <div *ngFor="let item of roadmapItems" class="col-12 col-sm-6 col-lg-3 py-3 py-lg-0">
+                <div class="lana_pet type-lana_pet card pet-grid-card" data-scroll-animate="fadeIn">
+                    <div class="lana-img-zoom">
+                        <img src={{item.image}} class="card-img-top img-fluid" alt="Pet">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="post-title card-title">
+                            {{item.title}}
+                        </h5>
+                        <p class="post-text card-text">
+                            {{item.description}}
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-text">
+                            {{item.date}}
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
