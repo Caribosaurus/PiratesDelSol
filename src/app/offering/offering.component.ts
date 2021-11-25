@@ -10,12 +10,12 @@ export class OfferingComponent implements OnInit {
     {
       title: "Monthly income Treasure Chest",
       icon: "/assets/icons/Treasure_chest.png",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ultricies dui, et posuere lacus. Vestibulum accumsan justo eget justo rhoncus convallis."
+      description: "Access to a monthly treasure chest which is filled with 38% of the royalties. \nEvery Crewman has access to an equal part of the treasure chest riches. In order to open it the Crewman needs 15 golden tokens."
     },
     {
       title: "Token Reward System",
       icon: "/assets/icons/Token.png",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ultricies dui, et posuere lacus. Vestibulum accumsan justo eget justo rhoncus convallis."
+      description: "Crewmen and Sailors can both do 5 tasks per week to receive golden tokens.\nThere will be tasks until the Golden Sol sinks and lets just say that the Golden Sol doesn’t sink."
     },
     {
       title: "Reduce supply / Increase scarcity mechanism",
@@ -30,7 +30,7 @@ export class OfferingComponent implements OnInit {
     {
       title: "Gamble your NFT's mini games",
       icon: "/assets/icons/Dice.png",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ultricies dui, et posuere lacus. Vestibulum accumsan justo eget justo rhoncus convallis."
+      description: "Get exclusive access to the Challenge Island.\nOn the Challenge Island, Crewmen can challenge each other by betting their NFT’s."
     },
     {
       title: "Community charitable donation",
