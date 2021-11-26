@@ -8,79 +8,91 @@ import { Component, OnInit } from '@angular/core';
 export class OurTeamComponent implements OnInit {
 
   teamMembers: Array<any> = [
+
     {
-      name: "Caribosaurus",
-      role: "Computer Magician",
-      description:'"I love pizza"',
-      image: "https://www.espree.com/sites/default/files/2019-10/Samoyed.png",
+      name: "Reshiram",
+      role: "Founder",
+      description:"",
+      image: "/assets/pictures/placeholder/250x250.svg",
       socials: {
-        facebook: "https://facebook.com",
+        facebook: "",
         twitter: "",
         linkedin: ""
       }
     },
     {
-      name: "Reshiram",
+      name: "Laurelle",
       role: "Founder",
-      description:"Quisque sit amet ex id lacus ullamcorper consectetur. Phasellus cursus arcu quam, vel porttitor magna efficitur ac.",
+      description:"",
       image: "/assets/pictures/placeholder/250x250.svg",
       socials: {
         facebook: "",
-        twitter: "https://facebook.com",
+        twitter: "",
+        linkedin: ""
+      }
+    },
+    {
+      name: "Caribosaurus",
+      role: "Computer Magician",
+      description:'',
+      image: "https://www.espree.com/sites/default/files/2019-10/Samoyed.png",
+      socials: {
+        facebook: "",
+        twitter: "",
         linkedin: ""
       }
     },
     {
       name: "Gregov",
       role: "Artist",
-      description:"Quisque sit amet ex id lacus ullamcorper consectetur. Phasellus cursus arcu quam, vel porttitor magna efficitur ac.",
+      description:"",
       image: "/assets/pictures/placeholder/250x250.svg",
       socials: {
         facebook: "",
         twitter: "",
-        linkedin: "https://facebook.com"
+        linkedin: ""
       }
     },
     {
-      name: "Natalia Scrilsen",
-      role: "Vaterian",
-      description:"Quisque sit amet ex id lacus ullamcorper consectetur. Phasellus cursus arcu quam, vel porttitor magna efficitur ac.",
+      name: "Savior",
+      role: "Marketing Manager",
+      description:"",
       image: "/assets/pictures/placeholder/250x250.svg",
       socials: {
-        facebook: "https://facebook.com",
+        facebook: "",
         twitter: "",
         linkedin: ""
       }
     },
     {
-      name: "Natalia Scrilsen",
-      role: "Vaterian",
-      description:"Quisque sit amet ex id lacus ullamcorper consectetur. Phasellus cursus arcu quam, vel porttitor magna efficitur ac.",
+      name: "Modking",
+      role: "Community Manager",
+      description:"",
       image: "/assets/pictures/placeholder/250x250.svg",
       socials: {
-        facebook: "https://facebook.com",
+        facebook: "",
         twitter: "",
         linkedin: ""
       }
     },
     {
-      name: "Natalia Scrilsen",
-      role: "Vaterian",
-      description:"Quisque sit amet ex id lacus ullamcorper consectetur. Phasellus cursus arcu quam, vel porttitor magna efficitur ac.",
+      name: "Freziz",
+      role: "Community Manager",
+      description:"",
       image: "/assets/pictures/placeholder/250x250.svg",
       socials: {
-        facebook: "https://facebook.com",
+        facebook: "",
         twitter: "",
         linkedin: ""
       }
     },
     {
-      name: "Natalia Scrilsen",
-      role: "Vaterian",
-      description:"Quisque sit amet ex id lacus ullamcorper consectetur. Phasellus cursus arcu quam, vel porttitor magna efficitur ac.",
+      name: "Mr Kern Napolitano",
+      role: "QA",
+      description:"",
       image: "/assets/pictures/placeholder/250x250.svg",
       socials: {
-        facebook: "https://facebook.com",
+        facebook: "",
         twitter: "",
         linkedin: ""
       }

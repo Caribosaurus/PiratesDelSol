@@ -4,7 +4,7 @@ class="container-fluid bg-dark text-white  section-py--large">
    <div class="row justify-content-center">
        <div class="col-12 col-md-10 col-lg-6 text-center">
            <h1 class="mb-4 font-weight-bold" data-scroll-animate="fadeInDown">What we offer</h1>
-           <p data-scroll-animate="fadeInUp">Placeholder.</p>
+           <p data-scroll-animate="fadeInUp">In order to accomplish this ambitious quest, every single aspect of our ship and journey has been focused around your financial needs.</p>
            <div class="lana-hr lana-hr-4 border-primary mt-4 mb-5" data-scroll-animate="zoomIn"></div>
        </div>
    </div>
@@ -18,8 +18,8 @@ class="container-fluid bg-dark text-white  section-py--large">
                    <h5 class="post-title card-title">
                        {{item.title}}
                    </h5>
-                   <p class="post-text card-text" style="white-space:pre-wrap">
-                        {{item.description}}
+                   <p *ngFor="let para of item.description"class="post-text card-text" style="white-space:pre-wrap">
+                        {{para}}
                    </p>
                </div>
            </div>

@@ -10,32 +10,49 @@ export class OfferingComponent implements OnInit {
     {
       title: "Monthly income Treasure Chest",
       icon: "/assets/icons/Treasure_chest.png",
-      description: "Access to a monthly treasure chest which is filled with 38% of the royalties. \nEvery Crewman has access to an equal part of the treasure chest riches. In order to open it the Crewman needs 15 golden tokens."
+      description: [
+        "Get access to a monthly treasure chest which is filled with 38% of the royalties.",
+        "Every Crewman has access to an equal part of the treasure chest riches."
+      ]
     },
     {
       title: "Token Reward System",
       icon: "/assets/icons/Token.png",
-      description: "Crewmen and Sailors can both do 5 tasks per week to receive golden tokens.\nThere will be tasks until the Golden Sol sinks and lets just say that the Golden Sol doesn’t sink."
+      description: [
+        "Crewmen (NFT owners) and Sailors (Non-Owners) can both do daily tasks to receive Pirates del Sol golden tokens.",
+        "These Tokens represent ALOT for the project's economy.",
+        "You'll be able to : Trade, Buy, Sell, Gamble and Burn them.They're our currency, make sure to take profit out of it."
+      ]
     },
     {
       title: "Reduce supply / Increase scarcity mechanism",
       icon: "/assets/icons/Chart.png",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ultricies dui, et posuere lacus. Vestibulum accumsan justo eget justo rhoncus convallis."
+      description: [
+        "You'll be able to BURN your Male and Female pirates to give birth to a newborn baby pirate NFT (Gen 2).",
+        "They will inherit the rarity traits you choose from the slaughtered parents."
+      ]
     },
     {
       title: "Handmade Artwork with rarity traits",
       icon: "/assets/icons/Ranks.png",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ultricies dui, et posuere lacus. Vestibulum accumsan justo eget justo rhoncus convallis."
+      description: [
+        "100% of our Artwork is hand-drawn with rarity traits and rankings.",
+        "Secondary sales will happen on a chosen Marketplace (TBD)"
+      ]
     },
     {
       title: "Gamble your NFT's mini games",
       icon: "/assets/icons/Dice.png",
-      description: "Get exclusive access to the Challenge Island.\nOn the Challenge Island, Crewmen can challenge each other by betting their NFT’s."
+      description: [
+        "Get exclusive access to the Challenge Island were Crewmen can challenge each other by betting their NFT’s on a 50/50 chance."
+      ]
     },
     {
       title: "Community charitable donation",
       icon: "/assets/icons/Charity.png",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ultricies dui, et posuere lacus. Vestibulum accumsan justo eget justo rhoncus convallis."
+      description: [
+        "We will make a community-chosen charitable donation which will be voted during October 2022."
+      ]
     },
 
 
