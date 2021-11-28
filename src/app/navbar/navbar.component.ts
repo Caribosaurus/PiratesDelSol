@@ -22,13 +22,8 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  async onLogin(): Promise<void> {
-    this.authenticationService.connect().pipe(
-      catchError((err:TypeError) => {
-        window.open("https://phantom.app/", "_blank");
-        return of(undefined);
-      })
-    ).subscribe();
+  onLogin(): void {
+    this.authenticationService.authenticate();
   }
 
 }
