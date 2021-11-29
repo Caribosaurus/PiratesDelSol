@@ -12,7 +12,7 @@
                 <div class="lana_pet type-lana_pet card pet-grid-card" data-scroll-animate="fadeIn">
                     <div class="lana-img-overlay  text-white">
                         <img src={{item.image}} class="mfp-image img-fluid" alt="Pet">
-                        <div class="container overlay-content">
+                        <div class="container overlay-content" *ngIf="item.title">
                             <div class="card-body">
                                 <h5 class="post-title card-title">
                                     {{item.title}}

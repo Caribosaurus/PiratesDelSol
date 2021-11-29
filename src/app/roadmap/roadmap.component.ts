@@ -8,27 +8,27 @@ import { Component, OnInit } from '@angular/core';
 export class RoadmapComponent implements OnInit {
   roadmapItems: Array<any> = [
     {
-      title:'Mint Day', 
+      title:'The Golden Sol departure', 
       image:'/assets/img/Roadmap/Roadmap_1.png', 
-      description: 'We launch our original collection',
-      date: "January 2022"
+      description: 'The 5000 male pirates collection launch',
+      date: "Q1 2022"
     },
     {
-      title:'Treasure Island', 
+      title:'Treasure Chest Island', 
       image:'/assets/img/Roadmap/Roadmap_2.png', 
       description: 'Our community chest starts to fill up!',
-      date: "January 2022"
+      date: "Q1 2022"
     },
     {
       title:'Challenge Island', 
       image:'/assets/img/Roadmap/Roadmap_3.png', 
-      description: 'You will be able to duel other pirates!',
-      date: "March 2022"
+      description: "Come gamble your NFT's into a 50/50 chance duel.",
+      date: "Q1 2022"
     },
     {
-      title:'Underground Market', 
+      title:'Blackmarket #1', 
       image:'/assets/img/Roadmap/Roadmap_4.png', 
-      description: 'The underground market opens, 5000 weapons will be available!',
+      description: 'The first Blackmarket is discovered, 5000 weapons will be available for our fellow mateys!',
       date: "April 2022"
     },
     {
@@ -40,13 +40,13 @@ export class RoadmapComponent implements OnInit {
     {
       title:'Summer Party Island', 
       image:'/assets/img/Roadmap/Roadmap_6.png', 
-      description: '',
+      description: 'Come celebrate our Mid-Roadmap birthday ! 76% of the royalties given back to the community.',
       date: "June 2022"
     },
     {
-      title:'', 
+      title:'The Golden Sol rescue', 
       image:'/assets/img/Roadmap/Roadmap_7.png', 
-      description: 'Female Collection Launch',
+      description: 'We rescue a unknown sinking ship ! The 5000 female pirates collection launch.',
       date: "July 2022"
     },
     {
@@ -56,15 +56,15 @@ export class RoadmapComponent implements OnInit {
       date: ""
     },
     {
-      title:'Underground Market Reopening', 
+      title:'Blackmarket #2', 
       image:'/assets/img/Roadmap/Roadmap_9.png', 
-      description: '5000 companion will be available',
+      description: 'We discover the second blackmarket! The 5000 pirate companions available for adoption.',
       date: "September 2022"
     },
     {
-      title:'Donations', 
+      title:'Community chosen charity donation', 
       image:'/assets/img/Roadmap/Roadmap_10.png', 
-      description: 'Community based charitable donations',
+      description: 'Come vote to choose a charitable organization.',
       date: "October 2022"
     },
     {
@@ -74,9 +74,9 @@ export class RoadmapComponent implements OnInit {
       date: ""
     },
     {
-      title:'Love Island', 
+      title:'Pirate Love Island', 
       image:'/assets/img/Roadmap/Roadmap_12.png', 
-      description: 'Pirates 2nd generation!',
+      description: 'A terrible event happens! Gen2 and Baby pirates announced!',
       date: "December 2022"
     },
   ] 
