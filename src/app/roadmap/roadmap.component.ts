@@ -58,7 +58,7 @@ export class RoadmapComponent implements OnInit {
     {
       title:'Blackmarket #2', 
       image:'/assets/img/Roadmap/Roadmap_9.png', 
-      description: 'We discover the second blackmarket! The 5000 pirate companions available for adoption.',
+      description: 'We discover the second blackmarket! 5000 pirates companions are available for adoption.',
       date: "September 2022"
     },
     {

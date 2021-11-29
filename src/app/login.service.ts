@@ -34,6 +34,8 @@ export class AuthenticationService {
     if (!this.solana.publicKey){
       await this.solana.connect();
     }
+    console.log(this.solana.publicKey);
+    console.log(this.solana.publicKey.toString());
     return this.solana.publicKey.toString();
     
   }
@@ -48,13 +50,25 @@ export class AuthenticationService {
   private async signMessage(nonce: string): Promise<any> {
     const encodedMessage = new TextEncoder().encode(nonce);
     const signedMessage = await this.solana.signMessage(encodedMessage, "utf8");
-    return signedMessage;
+    return signedMessage.signature;
+  }
+
+  private async fetchToken(signature: any){
+    const address = await this.get_pubKey();
+    const body = 
+      {
+        address,
+        signedNonce: signature
+      };
+    return this.http.post<{token:string}>(`${environment.apiUrl}/auth`, body);
+
   }
 
   async authenticate(): Promise<void> {
     const nonce = await (await this.fetchNonce()).toPromise();
 
-    await this.signMessage(nonce?.nonce as string);
+   const signature = await this.signMessage(nonce?.nonce as string);
+   console.log(await (await this.fetchToken(signature)).toPromise());
   }
 
   logout() {
