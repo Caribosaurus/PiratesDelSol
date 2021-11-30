@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, from, Observable, tap, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from './models/user';
+import * as base58 from 'bs58';
 
 
 @Injectable({ providedIn: 'root' })
@@ -31,44 +32,37 @@ export class AuthenticationService {
     if (!this.solana) {
       return Promise.reject(new TypeError("Phantom not installed"));
     }
-    if (!this.solana.publicKey){
+    if (!this.solana.publicKey) {
       await this.solana.connect();
     }
-    console.log(this.solana.publicKey);
-    console.log(this.solana.publicKey.toString());
     return this.solana.publicKey.toString();
-    
+
   }
 
-  private async fetchNonce(){
+  private async fetchNonce() {
     const address = await this.get_pubKey();
     const options = address ?
       { params: new HttpParams().set('address', address) } : {};
-    return this.http.get<{nonce:string; exp:string}>(`${environment.apiUrl}/auth/nonce`, options);
+    return this.http.get<{ nonce: string; exp: string }>(`${environment.apiUrl}/auth/nonce`, options);
   }
 
-  private async signMessage(nonce: string): Promise<any> {
+  private async signMessage(nonce: string) {
     const encodedMessage = new TextEncoder().encode(nonce);
-    const signedMessage = await this.solana.signMessage(encodedMessage, "utf8");
-    return signedMessage.signature;
+    const signedMessage = await this.solana.signMessage(encodedMessage);
+    return {
+      signature: base58.encode(signedMessage.signature),
+      publicKey: signedMessage.publicKey.toString() as string
+    };
   }
 
-  private async fetchToken(signature: any){
-    const address = await this.get_pubKey();
-    const body = 
-      {
-        address,
-        signedNonce: signature
-      };
-    return this.http.post<{token:string}>(`${environment.apiUrl}/auth`, body);
-
+  private async fetchToken(signature: { signature: string, publicKey: string }) {
+    return this.http.post<{ token: string }>(`${environment.apiUrl}/auth/token`, signature);
   }
 
   async authenticate(): Promise<void> {
     const nonce = await (await this.fetchNonce()).toPromise();
-
-   const signature = await this.signMessage(nonce?.nonce as string);
-   console.log(await (await this.fetchToken(signature)).toPromise());
+    const signature = await this.signMessage(nonce?.nonce as string);
+    console.log(await (await this.fetchToken(signature)).toPromise());
   }
 
   logout() {
