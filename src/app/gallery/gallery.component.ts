@@ -9,34 +9,34 @@ export class GalleryComponent implements OnInit {
 
   cards:Array<any> = [
     {
-      image: "/assets/img/johnny-depp-pirates.jpg",
-      thumbnail:"/assets/img/johnny-depp-pirates.jpg",
+      image: "/assets/img/gallery/1.png",
+      thumbnail:"/assets/img/gallery/Thumbnail/1.png",
       title: "Johnny"
     },
     {
-      image: "/assets/pictures/placeholder/1920x1080.svg",
-      thumbnail:"/assets/pictures/placeholder/640x430.svg",
+      image: "/assets/img/gallery/2.png",
+      thumbnail:"/assets/img/gallery/Thumbnail/2.png",
       title: "Jumbo"
     },
     {
-      image: "/assets/pictures/placeholder/1920x1080.svg",
-      thumbnail:"/assets/pictures/placeholder/640x430.svg",
+      image: "/assets/img/gallery/3.png",
+      thumbnail:"/assets/img/gallery/Thumbnail/3.png",
       title: "Jumbo"
     },
     {
-      image: "/assets/pictures/placeholder/1920x1080.svg",
-      thumbnail:"/assets/pictures/placeholder/640x430.svg",
+      image: "/assets/img/gallery/4.png",
+      thumbnail:"/assets/img/gallery/Thumbnail/4.png",
       title: "Jumbo"
     },
     {
-      image: "/assets/pictures/placeholder/1920x1080.svg",
-      thumbnail:"/assets/pictures/placeholder/640x430.svg",
+      image: "/assets/img/gallery/5.png",
+      thumbnail:"/assets/img/gallery/Thumbnail/5.png",
       title: "Jumbo"
     },
 
     {
-      image: "/assets/pictures/placeholder/1920x1080.svg",
-      thumbnail:"/assets/pictures/placeholder/640x430.svg",
+      image: "/assets/img/gallery/6.png",
+      thumbnail:"/assets/img/gallery/Thumbnail/6.png",
       title: "Jumbo"
     },
   ]
