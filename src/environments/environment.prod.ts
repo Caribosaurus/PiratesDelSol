@@ -1,5 +1,5 @@
 export const environment = {
-  production: false,
+  production: true,
   env: 'prod',
   discordCallbackUrl:'https://piratesdelsol.com',
   apiUrl: "https://api.piratesdelsol.com"
