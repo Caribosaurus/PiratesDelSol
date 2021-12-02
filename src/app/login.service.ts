@@ -1,24 +1,27 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, from, Observable, tap, throwError } from 'rxjs';
+import { BehaviorSubject, from, map, mergeMap, Observable, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from './models/user';
 import * as base58 from 'bs58';
+import jwt_decode from 'jwt-decode';
 
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-  private currentUserSubject: BehaviorSubject<User | undefined>;
-  public currentUser: Observable<User | undefined>;
 
+  private currentUserSubject: BehaviorSubject<User|null>;
+  public currentUser: Observable<User|null>;
 
   constructor(private http: HttpClient) {
-    this.currentUserSubject = new BehaviorSubject<User | undefined>(undefined);
-    this.currentUser = this.currentUserSubject.asObservable();
+      const token = localStorage.getItem('Auth');
+      console.log(token);
+      this.currentUserSubject = new BehaviorSubject<User|null>(token? jwt_decode(token): null);
+      this.currentUser = this.currentUserSubject.asObservable();
   }
 
-  public get currentUserValue(): User | undefined {
-    return this.currentUserSubject.value;
+  public get currentUserValue(): User | null {
+      return this.currentUserSubject.value;
   }
 
   private get solana(): any {
@@ -39,33 +42,45 @@ export class AuthenticationService {
 
   }
 
-  private async fetchNonce() {
-    const address = await this.get_pubKey();
-    const options = address ?
-      { params: new HttpParams().set('address', address) } : {};
-    return this.http.get<{ nonce: string; exp: string }>(`${environment.apiUrl}/auth/nonce`, options);
+  public login():Observable<User> {
+    return from(this.get_pubKey()).pipe(
+      mergeMap(address => {
+        const options = address ?
+          { params: new HttpParams().set('address', address) } : {};
+        return this.http.get<{ nonce: string; exp: string }>(`${environment.apiUrl}/auth/nonce`, options);
+      }),
+      mergeMap(nonce => this.signMessage(nonce.nonce)),
+      mergeMap(signature => this.acquireToken(signature)),
+      map(tokenResponse => {
+        localStorage.setItem("Auth", tokenResponse.token);
+        const user = jwt_decode(tokenResponse.token) as User;
+        this.currentUserSubject.next(user)
+        return user;
+      })
+    )
+
   }
 
-  private async signMessage(nonce: string) {
+
+  private signMessage(nonce: string) {
     const encodedMessage = new TextEncoder().encode(nonce);
-    const signedMessage = await this.solana.signMessage(encodedMessage);
-    return {
-      signature: base58.encode(signedMessage.signature),
-      publicKey: signedMessage.publicKey.toString() as string
-    };
+    return  from(this.solana.signMessage(encodedMessage)).pipe(
+      map((signedMessage: any) => {
+        return {
+          signature: base58.encode(signedMessage.signature),
+          publicKey: signedMessage.publicKey.toString() as string
+        };
+      })
+    )
+
   }
 
-  private async fetchToken(signature: { signature: string, publicKey: string }) {
+  private acquireToken(signature: { signature: string, publicKey: string }) {
     return this.http.post<{ token: string }>(`${environment.apiUrl}/auth/token`, signature);
   }
 
-  async authenticate(): Promise<void> {
-    const nonce = await (await this.fetchNonce()).toPromise();
-    const signature = await this.signMessage(nonce?.nonce as string);
-    console.log(await (await this.fetchToken(signature)).toPromise());
-  }
-
   logout() {
-    this.currentUserSubject.next(undefined);
+    localStorage.setItem('Auth', '');
+    this.currentUserSubject.next(null);
   }
 }

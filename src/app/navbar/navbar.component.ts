@@ -10,20 +10,23 @@ import { User } from '../models/user';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  user: Observable<User |null>;
 
-  environment: string = environment.env !== 'prod' ? environment.env : '';
-  currentUser: Observable<User | undefined>;
 
   constructor(
     private authenticationService: AuthenticationService
   ) {
-    this.currentUser = this.authenticationService.currentUser;
+    this.user = authenticationService.currentUser;
   }
+
 
   ngOnInit(): void {
   }
   onLogin(): void {
-    this.authenticationService.authenticate();
+    this.authenticationService.login().subscribe();
+  }
+  onLogout(): void {
+    this.authenticationService.logout();
   }
 
 }
