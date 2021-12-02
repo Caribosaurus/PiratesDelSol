@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, from, map, mergeMap, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, from, map, mergeMap, Observable, Subject, switchMap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from './models/user';
 import * as base58 from 'bs58';
@@ -44,13 +44,13 @@ export class AuthenticationService {
 
   public login():Observable<User> {
     return from(this.get_pubKey()).pipe(
-      mergeMap(address => {
+      switchMap(address => {
         const options = address ?
           { params: new HttpParams().set('address', address) } : {};
         return this.http.get<{ nonce: string; exp: string }>(`${environment.apiUrl}/auth/nonce`, options);
       }),
-      mergeMap(nonce => this.signMessage(nonce.nonce)),
-      mergeMap(signature => this.acquireToken(signature)),
+      switchMap(nonce => this.signMessage(nonce.nonce)),
+      switchMap(signature => this.acquireToken(signature)),
       map(tokenResponse => {
         localStorage.setItem("Auth", tokenResponse.token);
         const user = jwt_decode(tokenResponse.token) as User;

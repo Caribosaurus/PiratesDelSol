@@ -25,8 +25,6 @@ export class NavbarComponent implements OnInit {
   onLogin(): void {
     this.authenticationService.login().subscribe();
   }
-  onLogout(): void {
-    this.authenticationService.logout();
-  }
+
 
 }

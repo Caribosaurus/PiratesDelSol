@@ -12,6 +12,7 @@ import { OfferingComponent } from './offering/offering.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AuthInterceptor } from './auth.interceptor';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AuthInterceptor } from './auth.interceptor';
     RoadmapComponent,
     OfferingComponent,
     WelcomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

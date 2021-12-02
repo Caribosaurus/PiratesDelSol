@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   env: 'dev',
-  discordCallbackrl: 'http://localhost:4200',
+  discordCallbackUrl: 'http://localhost:4200',
   apiUrl: "https://api.piratesdelsol.com"
 };
 

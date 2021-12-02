@@ -21,11 +21,5 @@
 </nav>
 
 <ng-template #loggedIn>
-    <ul class="nav button-nav">
-        <li class="nav-item">
-            <button (click)="onLogout()" class="btn btn-sm btn-primary text-uppercase font-weight-bold my-auto" >
-            Disconnect {{(user | async)?.address}}
-            </button>
-        </li>
-    </ul>
+    <app-user></app-user>
 </ng-template>
