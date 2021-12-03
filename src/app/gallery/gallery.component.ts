@@ -11,33 +11,33 @@ export class GalleryComponent implements OnInit {
     {
       image: "/assets/img/gallery/1.png",
       thumbnail:"/assets/img/gallery/Thumbnail/1.png",
-      title: "Johnny"
+      title: ""
     },
     {
       image: "/assets/img/gallery/2.png",
       thumbnail:"/assets/img/gallery/Thumbnail/2.png",
-      title: "Jumbo"
+      title: ""
     },
     {
       image: "/assets/img/gallery/3.png",
       thumbnail:"/assets/img/gallery/Thumbnail/3.png",
-      title: "Jumbo"
+      title: ""
     },
     {
       image: "/assets/img/gallery/4.png",
       thumbnail:"/assets/img/gallery/Thumbnail/4.png",
-      title: "Jumbo"
+      title: ""
     },
     {
       image: "/assets/img/gallery/5.png",
       thumbnail:"/assets/img/gallery/Thumbnail/5.png",
-      title: "Jumbo"
+      title: ""
     },
 
     {
       image: "/assets/img/gallery/6.png",
       thumbnail:"/assets/img/gallery/Thumbnail/6.png",
-      title: "Jumbo"
+      title: ""
     },
   ]
 

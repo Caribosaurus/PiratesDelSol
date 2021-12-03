@@ -13,7 +13,7 @@ export class OurTeamComponent implements OnInit {
       name: "Reshiram",
       role: "Founder",
       description:"",
-      image: "/assets/pictures/placeholder/250x250.svg",
+      image: "/assets/img/gallery/Thumbnail/2.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -24,7 +24,7 @@ export class OurTeamComponent implements OnInit {
       name: "Laurelle",
       role: "Founder",
       description:"",
-      image: "/assets/pictures/placeholder/250x250.svg",
+      image: "/assets/img/gallery/Thumbnail/1.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -35,7 +35,7 @@ export class OurTeamComponent implements OnInit {
       name: "Caribosaurus",
       role: "Computer Magician",
       description:'',
-      image: "https://www.espree.com/sites/default/files/2019-10/Samoyed.png",
+      image: "/assets/img/gallery/Thumbnail/6.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -46,7 +46,7 @@ export class OurTeamComponent implements OnInit {
       name: "Gregov",
       role: "Artist",
       description:"",
-      image: "/assets/pictures/placeholder/250x250.svg",
+      image: "/assets/img/gallery/Thumbnail/1.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -57,7 +57,7 @@ export class OurTeamComponent implements OnInit {
       name: "Savior",
       role: "Marketing Manager",
       description:"",
-      image: "/assets/pictures/placeholder/250x250.svg",
+      image: "/assets/img/gallery/Thumbnail/4.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -68,7 +68,7 @@ export class OurTeamComponent implements OnInit {
       name: "Modking",
       role: "Community Manager",
       description:"",
-      image: "/assets/pictures/placeholder/250x250.svg",
+      image: "/assets/img/gallery/Thumbnail/5.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -79,7 +79,7 @@ export class OurTeamComponent implements OnInit {
       name: "Freziz",
       role: "Community Manager",
       description:"",
-      image: "/assets/pictures/placeholder/250x250.svg",
+      image: "/assets/img/gallery/Thumbnail/3.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -90,7 +90,7 @@ export class OurTeamComponent implements OnInit {
       name: "Mr Kern Napolitano",
       role: "QA",
       description:"",
-      image: "/assets/pictures/placeholder/250x250.svg",
+      image: "/assets/img/gallery/Thumbnail/1.png",
       socials: {
         facebook: "",
         twitter: "",
