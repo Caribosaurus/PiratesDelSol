@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, from, map, mergeMap, Observable, Subject, switchMap } from 'rxjs';
+import { BehaviorSubject, from, map, Observable, switchMap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from './models/user';
 import * as base58 from 'bs58';
