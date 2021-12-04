@@ -1,29 +1,37 @@
-<div id="offering-container"
-class="container-fluid bg-dark text-white  section-py--large">
-<div class="container">
-   <div class="row justify-content-center">
-       <div class="col-12 col-md-10 col-lg-6 text-center">
-           <h1 class="mb-4 font-weight-bold" data-scroll-animate="fadeInDown">What we offer</h1>
-           <p data-scroll-animate="fadeInUp">In order to accomplish this ambitious quest, every single aspect of our ship and journey has been focused around your financial needs.</p>
-           <div class="lana-hr lana-hr-4 border-primary mt-4 mb-5" data-scroll-animate="zoomIn"></div>
-       </div>
-   </div>
-   <div class="row mt-4 justify-content-center">
-       <div class="col-12 col-sm-6 col-lg-4 py-4 py-lg-0" *ngFor='let item of offerings'>
-           <div class="lana_service type-lana_service card service-card bg-transparent text-center">
-               <div class="card-img-top img-fluid" data-scroll-animate="zoomIn">
-                <img src="{{item.icon}}" class="mfp-image img-fluid" width="640">
-               </div>
-               <div class="card-body" data-scroll-animate="fadeIn" >
-                   <h5 class="post-title card-title">
-                       {{item.title}}
-                   </h5>
-                   <p *ngFor="let para of item.description"class="post-text card-text" style="white-space:pre-wrap">
-                        {{para}}
-                   </p>
-               </div>
-           </div>
-       </div>
-   </div>
-</div>
+<div id="offering-container" class="container-fluid bg-dark text-white  section-py--large">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-6 text-center">
+                <h1 class="mb-4 font-weight-bold" data-scroll-animate="fadeInDown">What we offer</h1>
+                <p data-scroll-animate="fadeInUp">In order to accomplish this ambitious quest, every single aspect of
+                    our ship and journey has been focused around your financial needs.</p>
+                <div class="lana-hr lana-hr-4 border-primary mt-4 mb-5" data-scroll-animate="zoomIn"></div>
+            </div>
+        </div>
+        <div class="row mt-4 justify-content-center">
+            <div class="col-12 col-sm-6 col-lg-4 py-4 py-lg-0" *ngFor='let item of offerings'>
+                <div class="lana_service type-lana_service card service-card bg-transparent text-center">
+                    <div class="card-img-top img-fluid" data-scroll-animate="zoomIn">
+                        <img src="{{item.icon}}" class="mfp-image img-fluid" width="640">
+                    </div>
+                    <div class="card-body" data-scroll-animate="fadeIn">
+                        <h5 class="post-title card-title">
+                            {{item.title}}
+                        </h5>
+                        <p *ngFor="let para of item.description" class="post-text card-text"
+                            style="white-space:pre-wrap">
+                            {{para}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <a href="https://discord.gg/qVxYyZwCKS"
+                    class="btn btn-primary btn-lg text-uppercase font-weight-bold mr-3 mb-3 w-20x">
+                    Join our Discord
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
