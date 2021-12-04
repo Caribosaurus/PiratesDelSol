@@ -10,6 +10,6 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   public addDiscord(code: string){
-    return this.http.post<{ token: string }>(`${environment.apiUrl}/user/discord`, {code});
+    return this.http.post<{ token: string }>(`${environment.apiUrl}/user/discord`, {code, callback: environment.discordCallbackUrl});
   }
 }

@@ -87,7 +87,7 @@ export class OurTeamComponent implements OnInit {
       }
     },
     {
-      name: "Sandy",
+      name: "Sande",
       role: "QA",
       description:"",
       image: "/assets/img/gallery/Thumbnail/1.png",
