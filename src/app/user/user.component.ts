@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { AuthenticationService } from '../login.service';
 import { User } from '../models/user';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../user.service';
@@ -16,12 +15,11 @@ export class UserComponent implements OnInit {
 
 
   constructor(
-    private authenticationService: AuthenticationService,
     private userService: UserService,
     private router: Router,
     private route: ActivatedRoute
   ) {
-    this.user = authenticationService.currentUser;
+    this.user = userService.currentUser;
   }
   public get discordAuthUrl() {
     return encodeURI(`https://discord.com/api/oauth2/authorize?client_id=910691941631557642&redirect_uri=${environment.discordCallbackUrl}&response_type=code&scope=identify`)
@@ -32,7 +30,7 @@ export class UserComponent implements OnInit {
       .subscribe(params => {
         const code = params['code'];
         if(code){
-          this.userService.addDiscord(code).subscribe();
+          this.userService.addDiscord(code);
           this.router.navigate(
             [], 
             {
@@ -43,7 +41,7 @@ export class UserComponent implements OnInit {
       });
   }
   onLogout(): void {
-    this.authenticationService.logout();
+    this.userService.logout();
   }
 
 }

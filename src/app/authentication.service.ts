@@ -10,19 +10,10 @@ import jwt_decode from 'jwt-decode';
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
 
-  private currentUserSubject: BehaviorSubject<User|null>;
-  public currentUser: Observable<User|null>;
 
   constructor(private http: HttpClient) {
-      const token = localStorage.getItem('Auth');
-      console.log(token);
-      this.currentUserSubject = new BehaviorSubject<User|null>(token? jwt_decode(token): null);
-      this.currentUser = this.currentUserSubject.asObservable();
   }
 
-  public get currentUserValue(): User | null {
-      return this.currentUserSubject.value;
-  }
 
   private get solana(): any {
     let _window = window as any;
@@ -52,10 +43,11 @@ export class AuthenticationService {
       switchMap(nonce => this.signMessage(nonce.nonce)),
       switchMap(signature => this.acquireToken(signature)),
       map(tokenResponse => {
-        localStorage.setItem("Auth", tokenResponse.token);
         const user = jwt_decode(tokenResponse.token) as User;
-        this.currentUserSubject.next(user)
-        return user;
+        user.token = tokenResponse.token;
+        localStorage.setItem("User", JSON.stringify(user));
+        console.log(user);
+        return user ;
       })
     )
 
@@ -77,10 +69,5 @@ export class AuthenticationService {
 
   private acquireToken(signature: { signature: string, publicKey: string }) {
     return this.http.post<{ token: string }>(`${environment.apiUrl}/auth/token`, signature);
-  }
-
-  logout() {
-    localStorage.setItem('Auth', '');
-    this.currentUserSubject.next(null);
   }
 }

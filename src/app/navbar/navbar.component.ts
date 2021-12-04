@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { catchError, Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { AuthenticationService } from '../login.service';
+import { AuthenticationService } from '../authentication.service';
 import { User } from '../models/user';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-navbar',
@@ -14,16 +15,16 @@ export class NavbarComponent implements OnInit {
 
 
   constructor(
-    private authenticationService: AuthenticationService
+    private userService: UserService
   ) {
-    this.user = authenticationService.currentUser;
+    this.user = userService.currentUser;
   }
 
 
   ngOnInit(): void {
   }
   onLogin(): void {
-    this.authenticationService.login().subscribe();
+    this.userService.login();
   }
 
 
