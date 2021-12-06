@@ -1,3 +1,8 @@
+:host{
+  position: absolute;
+  right: 1rem;
+  top: 35%;
+}
 .user-container{
   display: flex;
   flex-flow: column;
@@ -27,6 +32,7 @@ button {
 }
 .user-info{
   background-color: white;
+  border-radius: 1rem;
   padding: 1rem;
 }
 .address{
