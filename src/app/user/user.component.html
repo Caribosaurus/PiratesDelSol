@@ -39,7 +39,7 @@
     </div>
     <div class="user-info" *ngIf="showAddress">
         <p class="address">{{((user | async)?.address | slice:0:15)+'...'}}</p>
-        <button class="logout">Logout</button>
+        <button class="btn-sm" (click)="onLogout()">Logout</button>
     </div>
 </div>
 
