@@ -12,6 +12,7 @@ import { UserService } from '../user.service';
 })
 export class UserComponent implements OnInit {
   user: Observable<User | null>;
+  showAddress = false;
 
 
   constructor(

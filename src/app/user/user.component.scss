@@ -1,20 +1,33 @@
+.user-container{
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+}
+.button-nav{
+  justify-content: flex-end;
+}
 .logo {
-    width: 2rem;
+    height: 2rem;
     display: inline-block;
   }
+.button-nav {
+  float: right;
+}
 .discord:hover path{
     fill: #5865F2;
   }
 img{
     width: 2rem;
 }
-ul
-{
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
+
 button {
   background: transparent;
   border: none;
+}
+.user-info{
+  background-color: white;
+  padding: 1rem;
+}
+.address{
+  border-bottom: 3px solid black;
 }

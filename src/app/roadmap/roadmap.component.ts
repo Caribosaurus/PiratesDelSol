@@ -22,13 +22,13 @@ export class RoadmapComponent implements OnInit {
     {
       title:'Challenge Island', 
       image:'/assets/img/Roadmap/Roadmap_3.png', 
-      description: "Come gamble your NFT's into a 50/50 chance duel.",
+      description: "Gamble your NFTs in a 50/50 odds duel.",
       date: "Q1 2022"
     },
     {
       title:'Blackmarket #1', 
       image:'/assets/img/Roadmap/Roadmap_4.png', 
-      description: 'The first Blackmarket is discovered, 5000 weapons will be available for our fellow mateys!',
+      description: 'The first Blackmarket is discovered, 5000 weapons will be available for our fellow Crewmen!',
       date: "April 2022"
     },
     {
@@ -40,13 +40,13 @@ export class RoadmapComponent implements OnInit {
     {
       title:'Summer Party Island', 
       image:'/assets/img/Roadmap/Roadmap_6.png', 
-      description: 'Come celebrate our Mid-Roadmap birthday ! 76% of the royalties given back to the community.',
+      description: 'Celebration of our Mid-Roadmap birthday! 100% of the royalties given back to the community.',
       date: "June 2022"
     },
     {
       title:'The Golden Sol rescue', 
       image:'/assets/img/Roadmap/Roadmap_7.png', 
-      description: 'We rescue a unknown sinking ship ! The 5000 female pirates collection launch.',
+      description: 'We will rescue an unknown sinking ship! The 5000 Female Pirates Collection Launch.',
       date: "July 2022"
     },
     {
@@ -58,13 +58,13 @@ export class RoadmapComponent implements OnInit {
     {
       title:'Blackmarket #2', 
       image:'/assets/img/Roadmap/Roadmap_9.png', 
-      description: 'We discover the second blackmarket! 5000 pirates companions are available for adoption.',
+      description: 'The second Blackmarket is discovered! 5000 NFT Pirates Companions are available for adoption.',
       date: "September 2022"
     },
     {
       title:'Community chosen charity donation', 
       image:'/assets/img/Roadmap/Roadmap_10.png', 
-      description: 'Come vote to choose a charitable organization.',
+      description: 'The community chooses a charitable organization that will receive a generous donation from the Pirates Del Sol NFT project.',
       date: "October 2022"
     },
     {

@@ -11,7 +11,7 @@ export class OfferingComponent implements OnInit {
       title: "Monthly income Treasure Chest",
       icon: "/assets/icons/Treasure_chest.png",
       description: [
-        "Get access to a monthly treasure chest which is filled with 38% of the royalties.",
+        "Get access to a monthly treasure chest which is filled with 50% of the royalties.",
         "Every Crewman has access to an equal part of the treasure chest riches."
       ]
     },
@@ -19,9 +19,9 @@ export class OfferingComponent implements OnInit {
       title: "Token Reward System",
       icon: "/assets/icons/Token.png",
       description: [
-        "Crewmen (NFT owners) and Sailors (Non-Owners) can both do daily tasks to receive Pirates del Sol golden tokens.",
-        "These Tokens represent ALOT for the project's economy.",
-        "You'll be able to : Trade, Buy, Sell, Gamble and Burn them.They're our currency, make sure to take profit out of it."
+        "Crewmen (NFT owners) and Sailors (Non-Owners) can both do daily tasks to receive Pirates Del Sol Golden Tokens.",
+        "These Golden Tokens represent A LOT for the project's economy.",
+        "You'll be able to : Trade, Buy, Sell, Gamble and Burn them."
       ]
     },
     {
@@ -29,7 +29,7 @@ export class OfferingComponent implements OnInit {
       icon: "/assets/icons/Chart.png",
       description: [
         "You'll be able to BURN your Male and Female pirates to give birth to a newborn baby pirate NFT (Gen 2).",
-        "They will inherit the rarity traits you choose from the slaughtered parents."
+        "The newborn will inherit the rarity traits you choose from the parents."
       ]
     },
     {
