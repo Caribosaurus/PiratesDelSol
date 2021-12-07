@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { catchError, Observable, of } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import { AuthenticationService } from '../authentication.service';
+import { Observable } from 'rxjs';
 import { User } from '../models/user';
 import { UserService } from '../user.service';
 
@@ -15,7 +13,8 @@ export class NavbarComponent implements OnInit {
 
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    
   ) {
     this.user = userService.currentUser;
   }
@@ -24,7 +23,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
   onLogin(): void {
-    this.userService.login();
+      this.userService.login();
   }
 
 
