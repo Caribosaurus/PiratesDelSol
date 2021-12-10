@@ -13,7 +13,7 @@ export class OurTeamComponent implements OnInit {
       name: "Reshiram",
       role: "Founder",
       description:"",
-      image: "/assets/img/gallery/Thumbnail/2.png",
+      image: "/assets/img/OurTeam/2.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -24,7 +24,7 @@ export class OurTeamComponent implements OnInit {
       name: "Laurelle",
       role: "Founder",
       description:"",
-      image: "/assets/img/gallery/Thumbnail/1.png",
+      image: "/assets/img/OurTeam/laurelle.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -35,7 +35,7 @@ export class OurTeamComponent implements OnInit {
       name: "Caribosaurus",
       role: "Computer Magician",
       description:'',
-      image: "/assets/img/gallery/Thumbnail/6.png",
+      image: "/assets/img/OurTeam/6.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -46,7 +46,7 @@ export class OurTeamComponent implements OnInit {
       name: "Gregov",
       role: "Artist",
       description:"",
-      image: "/assets/img/gallery/Thumbnail/1.png",
+      image: "/assets/img/OurTeam/gregov.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -57,7 +57,7 @@ export class OurTeamComponent implements OnInit {
       name: "Savior",
       role: "Marketing Manager",
       description:"",
-      image: "/assets/img/gallery/Thumbnail/4.png",
+      image: "/assets/img/OurTeam/4.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -68,7 +68,7 @@ export class OurTeamComponent implements OnInit {
       name: "Modking",
       role: "Community Manager",
       description:"",
-      image: "/assets/img/gallery/Thumbnail/5.png",
+      image: "/assets/img/OurTeam/5.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -79,7 +79,7 @@ export class OurTeamComponent implements OnInit {
       name: "Freziz",
       role: "Community Manager",
       description:"",
-      image: "/assets/img/gallery/Thumbnail/3.png",
+      image: "/assets/img/OurTeam/3.png",
       socials: {
         facebook: "",
         twitter: "",
@@ -90,7 +90,7 @@ export class OurTeamComponent implements OnInit {
       name: "Sande",
       role: "QA",
       description:"",
-      image: "/assets/img/gallery/Thumbnail/1.png",
+      image: "/assets/img/OurTeam/sande.png",
       socials: {
         facebook: "",
         twitter: "",

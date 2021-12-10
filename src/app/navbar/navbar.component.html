@@ -10,7 +10,7 @@
         </ul>
     </div>
     <div class="button-nav-widget d-inline-flex ">
-        <ul class="nav button-nav" *ngIf="!(user | async); else loggedIn">
+        <ul class="nav button-nav d-none d-sm-block" *ngIf="!(user | async); else loggedIn">
             <li class="nav-item">
                 <button (click)="onLogin()" class="btn btn-sm btn-primary text-uppercase font-weight-bold my-auto" >
                 Connect  wallet
