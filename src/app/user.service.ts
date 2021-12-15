@@ -37,13 +37,12 @@ export class UserService {
     );
   }
   public logout() {
-    
     this.currentUserValue = null;
   }
 
   public addDiscord(code: string) {
     return this.http.post<User>(`${environment.apiUrl}/user/discord`, { code, callback: environment.discordCallbackUrl }).subscribe(
-      user => this.currentUserValue = user
+      user => this.currentUserValue = {...user,token: this.currentUserValue?.token}
     );
   }
 }
