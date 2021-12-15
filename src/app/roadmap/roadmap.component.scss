@@ -1,0 +1,19 @@
+.text-responsive {
+    font-size: calc(100% + 0.01vw + 0.01vh);
+}
+.card-header {
+    height: 25%;
+    h5 {
+        height: 100%;
+        margin: 0 !important;
+    }
+}
+
+.card-body {
+    height: 65%;
+}
+
+.card-footer {
+    bottom: 0;
+    height: 10%;
+}
