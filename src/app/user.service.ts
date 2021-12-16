@@ -33,7 +33,7 @@ export class UserService {
   public login() {
     return this.authService.login().subscribe(
       (user: User) => this.currentUserValue = user,
-      (err: Error)=>{this.toastr.error('Please install Phantom wallet', '')}
+      (err: Error)=>{this.toastr.error('Please install a compatible solana wallet (Solflare/Phantom)', '')}
     );
   }
   public logout() {

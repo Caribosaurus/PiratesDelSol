@@ -15,21 +15,24 @@ export class AuthenticationService {
   }
 
 
-  private get solana(): any {
+  private get wallet(): any {
     let _window = window as any;
     if (_window.solana) {
       return _window.solana;
     }
+    if (_window.solflare){
+      return _window.solflare;
+    }
   }
 
   private async get_pubKey(): Promise<string> {
-    if (!this.solana) {
-      return Promise.reject(new TypeError("Phantom not installed"));
+    if (!this.wallet) {
+      return Promise.reject(new TypeError("No installed Wallet"));
     }
-    if (!this.solana.publicKey) {
-      await this.solana.connect();
+    if (!this.wallet.publicKey) {
+      await this.wallet.connect();
     }
-    return this.solana.publicKey.toString();
+    return this.wallet.publicKey.toString();
 
   }
 
@@ -56,7 +59,7 @@ export class AuthenticationService {
 
   private signMessage(nonce: string) {
     const encodedMessage = new TextEncoder().encode(nonce);
-    return  from(this.solana.signMessage(encodedMessage)).pipe(
+    return  from(this.wallet.signMessage(encodedMessage)).pipe(
       map((signedMessage: any) => {
         return {
           signature: base58.encode(signedMessage.signature),
