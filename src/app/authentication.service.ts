@@ -59,7 +59,7 @@ export class AuthenticationService {
 
   private signMessage(nonce: string) {
     const encodedMessage = new TextEncoder().encode(nonce);
-    return  from(this.wallet.signMessage(encodedMessage)).pipe(
+    return  from(this.wallet.signMessage(encodedMessage,'utf8')).pipe(
       map((signedMessage: any) => {
         return {
           signature: base58.encode(signedMessage.signature),
