@@ -30,7 +30,13 @@ export class AuthenticationService {
       return Promise.reject(new TypeError("No installed Wallet"));
     }
     if (!this.wallet.publicKey) {
-      await this.wallet.connect();
+      if(this.wallet.isMathWallet){
+        await this.wallet.getAccount();
+      }
+      else{
+        await this.wallet.connect();
+      }
+      
     }
     return this.wallet.publicKey.toString();
 
