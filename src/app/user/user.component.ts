@@ -44,5 +44,8 @@ export class UserComponent implements OnInit {
   onLogout(): void {
     this.userService.logout();
   }
+  onCreateWallet(): void{
+    this.userService.createPdsWallet();
+  }
 
 }

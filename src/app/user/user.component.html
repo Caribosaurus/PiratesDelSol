@@ -39,6 +39,7 @@
     </div>
     <div class="user-info" *ngIf="showAddress">
         <p class="address">{{((user | async)?.address | slice:0:15)+'...'}}</p>
+        <p class="address" *ngIf="(user | async)?.pdsAccount; else PDSbutton">{{((user | async)?.pdsAccount | slice:0:15)}}</p>
         <button class="btn-sm" (click)="onLogout()">Logout</button>
     </div>
 </div>
@@ -82,4 +83,8 @@
 
     </a>
 
+</ng-template>
+
+<ng-template #PDSbutton>
+    <button class="btn-sm" (click)="onCreateWallet()">Create PDS token wallet</button>
 </ng-template>

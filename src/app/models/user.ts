@@ -1,5 +1,6 @@
 export type User = {
     address: string,
+    pdsAccount?: string,
     discord?: {
         id: string,
         username: string,

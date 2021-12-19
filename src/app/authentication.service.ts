@@ -55,7 +55,6 @@ export class AuthenticationService {
         const user = jwt_decode(tokenResponse.token) as User;
         user.token = tokenResponse.token;
         localStorage.setItem("User", JSON.stringify(user));
-        console.log(user);
         return user ;
       })
     )
