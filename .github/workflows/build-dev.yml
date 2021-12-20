@@ -25,7 +25,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: export NODE_OPTIONS="--max-old-space-size=5120"
     - run: npm run build:uat
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
