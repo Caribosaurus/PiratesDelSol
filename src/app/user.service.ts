@@ -71,4 +71,11 @@ export class UserService {
       }
     );
   }
+  public addTwitter(code: string) {
+    return this.http.post<User>(`${environment.apiUrl}/user/twitter`, { code, callback: environment.twitterCallbackUrl }).subscribe(
+      user => {
+        this.currentUserValue = {...user,token: this.currentUserValue?.token};
+      }
+    );
+  }
 }

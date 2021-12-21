@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   env: 'dev',
   discordCallbackUrl: 'http://localhost:4200',
-  apiUrl: "https://api.piratesdelsol.com"
+  apiUrl: "https://api.piratesdelsol.com",
+  twitterCallbackUrl: "http://localhost:4200",
 };
 
 /*
