@@ -26,8 +26,7 @@ export class UserComponent implements OnInit {
     return encodeURI(`https://discord.com/api/oauth2/authorize?client_id=910691941631557642&redirect_uri=${environment.discordCallbackUrl}&response_type=code&scope=identify`)
   }
   public get twitterAuthUrl(){
-    return encodeURI(`https://twitter.com/i/oauth2/authorize?client_id=OEVmR3VsR0prN3ZsX0FNNGtwVUs6MTpjaQ&redirect_uri=${environment.twitterCallbackUrl}&response_type=code&scope=tweet.read&state=xyzABC123&code_challenge=challenge&code_challenge_method=plain`)
-
+    return encodeURI(`https://twitter.com/i/oauth2/authorize?client_id=OEVmR3VsR0prN3ZsX0FNNGtwVUs6MTpjaQ&redirect_uri=${environment.twitterCallbackUrl}&response_type=code&scope=users.read tweet.read&state=xyzABC123&code_challenge=challenge&code_challenge_method=plain`)
   }
 
   ngOnInit() {
