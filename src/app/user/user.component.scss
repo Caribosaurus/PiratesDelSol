@@ -38,6 +38,17 @@ button {
   border-radius: 1rem;
   padding: 1rem;
 }
-.address{
+.address-container{
   border-bottom: 3px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.address-text{
+  width: 12em;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  padding-left: 1em;
 }

@@ -7,6 +7,7 @@ import {
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import { getConnection } from "./connection";
 import { sendTxUsingExternalSignature, useWallet } from "./externalwallet";
+import { environment } from "src/environments/environment";
 
 const SPL_ASSOCIATED_TOKEN_ACCOUNT_PROGRAM_ID = new PublicKey(
   "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
@@ -53,7 +54,7 @@ const createIx = (
 
 export const createAssociatedTokenAccount = async (
 ) => {
-  const tokenMintPublicKey = new PublicKey('C7MnWhwB4JyA21bo6wnomQA5jJtd31WoaiCSKbVTHq5n');
+  const tokenMintPublicKey = new PublicKey(environment.tokenMintAddress);
   const connection = getConnection();
   const wallet = await useWallet();
   const associatedTokenAccountPublicKey = await findAssociatedTokenAccountPublicKey(

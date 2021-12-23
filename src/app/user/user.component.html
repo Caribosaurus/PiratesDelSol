@@ -18,9 +18,23 @@
         </div>
     </div>
     <div class="user-info" *ngIf="showAddress">
-        <p class="address">{{((user | async)?.address | slice:0:15)+'...'}}</p>
-        <p class="address" *ngIf="(user | async)?.pdsAccount; else PDSbutton">{{((user | async)?.pdsAccount | slice:0:15)}}</p>
-        <button class="btn-sm" (click)="onLogout()">Logout</button>
+        <div class="address-container">
+            <div class="address-image">
+                <img class="rounded-circle"src="/assets/icons/Solana_logo.png">
+            </div>
+            <div class="address-text">
+                <p>{{((user | async)?.address | slice:0:15)}}</p>
+            </div>
+        </div>
+        <div class="address-container" *ngIf="(user | async)?.pdsAccount; else  PDSbutton">
+            <div class="address-image">
+                <img class="rounded-circle"src="/assets/icons/Token_small.png">
+            </div>
+            <div class="address-text">
+                <p>{{((user | async)?.pdsAccount | slice:0:15)}}</p>
+            </div>
+        </div>
+        <button class="btn btn-outline-primary btn-lg text-black text-uppercase font-weight-bold" (click)="onLogout()">Logout</button>
     </div>
 </div>
 
@@ -66,5 +80,8 @@
 </ng-template>
 
 <ng-template #PDSbutton>
-    <button class="btn-sm" (click)="onCreateWallet()">Create PDS token wallet</button>
+    <div class="address-container">
+        <button class="btn btn-outline-primary btn-lg text-black text-uppercase font-weight-bold" (click)="onCreateWallet()">Create PDS token wallet</button>
+    </div>
+    
 </ng-template>

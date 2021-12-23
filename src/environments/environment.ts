@@ -8,6 +8,8 @@ export const environment = {
   discordCallbackUrl: 'http://localhost:4200',
   apiUrl: "https://api.piratesdelsol.com",
   twitterCallbackUrl: "http://localhost:4200",
+  tokenMintAddress: "CUiFVBky9PEHej6ujWxBebNUz264FnDHgCmgdA8HTNUg",
+  solanaCluster: "devnet",
 };
 
 /*

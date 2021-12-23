@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { PublicKey, Connection, clusterApiUrl } from '@solana/web3.js';
+import { PublicKey, Connection, clusterApiUrl, Cluster } from '@solana/web3.js';
 import { TOKEN_PROGRAM_ID } from '@solana/spl-token';
 import { createAssociatedTokenAccount } from './spl-token/create-account';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { createAssociatedTokenAccount } from './spl-token/create-account';
 export class TokenService {
 
   private SPL_ASSOCIATED_TOKEN_ACCOUNT_PROGRAM_ID: PublicKey = new PublicKey('ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL',);
-  private tokenMintAddress: PublicKey = new PublicKey('C7MnWhwB4JyA21bo6wnomQA5jJtd31WoaiCSKbVTHq5n');
+  private tokenMintAddress: PublicKey = new PublicKey(environment.tokenMintAddress);
 
 
   constructor() { }
@@ -26,7 +27,7 @@ export class TokenService {
           ],
           this.SPL_ASSOCIATED_TOKEN_ACCOUNT_PROGRAM_ID
       ))[0];
-      const conn = new Connection(clusterApiUrl("mainnet-beta"));
+      const conn = new Connection(clusterApiUrl(environment.solanaCluster as Cluster));
       const info = await conn.getAccountInfo(pdsPubKey);
       return info? pdsPubKey: undefined;
   }

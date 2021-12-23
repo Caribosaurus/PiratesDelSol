@@ -31,12 +31,18 @@ export class UserService {
   }
 
   private set currentUserValue(user:User|null) {
-    if(user){
-       this.tokenService.findAssociatedTokenAddress(user.address).then(pubKey => {
-        user.pdsAccount = pubKey? pubKey.toBase58(): undefined;
+    if(user && !user.pdsAccount){
+      if(user.pdsAccount){
         localStorage.setItem('User', JSON.stringify(user));
         this.currentUserSubject.next(user);
-      })
+      }
+      else{
+        this.tokenService.findAssociatedTokenAddress(user.address).then(pubKey => {
+          user.pdsAccount = pubKey? pubKey.toBase58(): undefined;
+          localStorage.setItem('User', JSON.stringify(user));
+          this.currentUserSubject.next(user);
+        })
+      }
     }
     else {
       localStorage.setItem('User','');
