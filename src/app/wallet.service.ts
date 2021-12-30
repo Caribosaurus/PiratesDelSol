@@ -48,7 +48,9 @@ export class WalletService {
   public signMessage(nonce: string) {
     const encodedMessage = new TextEncoder().encode(nonce);
     this.toastr.info(nonce, '');
-    return  from(this.wallet.signMessage(encodedMessage,'utf8')).pipe(
+    this.toastr.info(`${!!this.wallet.signMessage}`, 'Supports Signing');
+    const signature = this.wallet.signMessage(encodedMessage,'utf8');
+    return  from(signature).pipe(
       map((signedMessage: any) => {
         return {
           signature: base58.encode(signedMessage.signature),
