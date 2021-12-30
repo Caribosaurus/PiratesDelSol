@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import base58 from 'bs58';
 import { ToastrService } from 'ngx-toastr';
-import { from, map } from 'rxjs';
+import { from, map, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -51,6 +51,7 @@ export class WalletService {
     this.toastr.info(`${!!this.wallet.signMessage}`, 'Supports Signing');
     const signature = this.wallet.signMessage(encodedMessage,'utf8');
     return  from(signature).pipe(
+      tap((x: any) => this.toastr.info(`${base58.encode(x.signature)}`, 'Signature')),
       map((signedMessage: any) => {
         return {
           signature: base58.encode(signedMessage.signature),
