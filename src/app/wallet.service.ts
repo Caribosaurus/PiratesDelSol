@@ -12,18 +12,19 @@ export class WalletService {
     private toastr: ToastrService
   ) {
     if(this.wallet){
-      this.wallet.on("connect", () => this.toastr.error('Connected', ''));
+      this.wallet.on("connect", () => this.toastr.info('Connected', ''));
     }
    }
 
    public get wallet(): any {
     let _window = window as any;
-    if (_window.solana) {
-      return _window.solana;
-    }
     if (_window.solflare){
       return _window.solflare;
     }
+    if (_window.solana) {
+      return _window.solana;
+    }
+
   }
   public async get_pubKey(): Promise<string> {
     if (!this.wallet) {
