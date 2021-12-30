@@ -16,6 +16,7 @@ export class PlatformService {
     return this.platform.IOS || this.platform.ANDROID;
   }
   public supportsWallet(){
-    return !this.isMobile() || !!this.walletService.wallet;
+    console.log(!!this.walletService.wallet);
+    return (this.platform.isBrowser || !!this.walletService.wallet);
   }
 }
