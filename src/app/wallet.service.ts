@@ -11,9 +11,6 @@ export class WalletService {
   constructor(
     private toastr: ToastrService
   ) {
-    if(this.wallet){
-      this.wallet.on("connect", () => this.toastr.info('Connected', ''));
-    }
    }
 
    public get wallet(): any {
@@ -29,6 +26,7 @@ export class WalletService {
   }
   public async get_pubKey(): Promise<string> {
     if (!this.wallet) {
+      this.toastr.info('No installed Wallet', '')
       return Promise.reject(new TypeError("No installed Wallet"));
     }
     if (!this.wallet.publicKey) {
@@ -36,10 +34,14 @@ export class WalletService {
         await this.wallet.getAccount();
       }
       else{
+        this.toastr.info('Asking to connect', '');
         const connected = await this.wallet.connect();
+        this.toastr.info('Answered', '')
         if(!connected){
           return Promise.reject(new TypeError("Refused to connect"));
         }
+        else 
+          this.toastr.info('Connected', '')
       }
     }
     return this.wallet.publicKey.toString();

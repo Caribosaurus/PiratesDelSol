@@ -16,7 +16,6 @@ export class PlatformService {
     return this.platform.IOS || this.platform.ANDROID;
   }
   public supportsWallet(){
-    console.log(!!this.walletService.wallet);
     return (this.platform.isBrowser || !!this.walletService.wallet);
   }
 }
