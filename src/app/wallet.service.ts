@@ -34,21 +34,20 @@ export class WalletService {
         await this.wallet.getAccount();
       }
       else{
-        this.toastr.info('Asking to connect', '');
+        
         const connected = await this.wallet.connect();
-        this.toastr.info('Answered', '')
         if(!connected){
           return Promise.reject(new TypeError("Refused to connect"));
         }
-        else 
-          this.toastr.info('Connected', '')
       }
     }
+    this.toastr.info(this.wallet.publicKey.toString(), '');
     return this.wallet.publicKey.toString();
 
   }
   public signMessage(nonce: string) {
     const encodedMessage = new TextEncoder().encode(nonce);
+    this.toastr.info(nonce, '');
     return  from(this.wallet.signMessage(encodedMessage,'utf8')).pipe(
       map((signedMessage: any) => {
         return {
