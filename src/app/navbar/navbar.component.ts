@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
+import { PlatformService } from '../platform.service';
 import { UserService } from '../user.service';
 
 @Component({
@@ -14,11 +15,14 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private userService: UserService,
+    private platformService: PlatformService
     
   ) {
     this.user = userService.currentUser;
   }
-
+  public get supportsWallet(){
+    return this.platformService.supportsWallet();
+  }
 
   ngOnInit(): void {
   }

@@ -15,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AuthInterceptor } from './auth.interceptor';
 import { UserComponent } from './user/user.component';
 import { ToastrModule } from 'ngx-toastr';
+import { PlatformModule } from '@angular/cdk/platform';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule,
     BrowserAnimationsModule, 
     ToastrModule.forRoot(),
+    PlatformModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

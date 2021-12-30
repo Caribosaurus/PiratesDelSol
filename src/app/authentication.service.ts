@@ -15,7 +15,7 @@ export class AuthenticationService {
   }
 
 
-  private get wallet(): any {
+  public get wallet(): any {
     let _window = window as any;
     if (_window.solana) {
       return _window.solana;
