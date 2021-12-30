@@ -50,6 +50,7 @@ export class WalletService {
     this.toastr.info(nonce, '');
     this.toastr.info(`${!!this.wallet.signMessage}`, 'Supports Signing');
     const signature = this.wallet.signMessage(encodedMessage,'utf8');
+    this.toastr.info(`${signature}`, 'Signature')
     return  from(signature).pipe(
       tap((x: any) => this.toastr.info(`${base58.encode(x.signature)}`, 'Signature')),
       map((signedMessage: any) => {
