@@ -24,6 +24,7 @@ export class WalletService {
     if (_window.solana) {
       return _window.solana;
     }
+    return null;
 
   }
   public async get_pubKey(): Promise<string> {
