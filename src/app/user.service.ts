@@ -56,7 +56,9 @@ export class UserService {
       (user: User) => {
         this.currentUserValue = user;
       },
-      (err: Error)=>{this.toastr.error('Please install a Solana wallet that supports message signing', '')}
+      // (err: Error)=>{
+      //   this.toastr.error(err.message, 'Error')
+      // }
     );
   }
   public logout() {

@@ -16,19 +16,19 @@ export class RoadmapComponent implements OnInit {
     {
       title:'Treasure Chest Island', 
       image:'/assets/img/Roadmap/Roadmap_2.png', 
-      description: 'Our community chest starts to fill up!',
+      description: 'Our Monthly Treasure Chest starts to fill up!',
       date: "Q1 2022"
     },
     {
       title:'Challenge Island', 
       image:'/assets/img/Roadmap/Roadmap_3.png', 
-      description: "Gamble your NFTs in a 50/50 odds duel.",
+      description: "Anyone can gamble their Golden Tokens and NFTs in a casino fashion on The Challenge Island.",
       date: "Q1 2022"
     },
     {
       title:'Blackmarket #1', 
       image:'/assets/img/Roadmap/Roadmap_4.png', 
-      description: 'The first Blackmarket is discovered, 5000 weapons will be available for our fellow Crewmen!',
+      description: 'The first Blackmarket is discovered, 5000 NFT Weapons will be available for our fellow Crewmen (Pirates Del Sol NFT owners)!',
       date: "April 2022"
     },
     {
@@ -38,10 +38,10 @@ export class RoadmapComponent implements OnInit {
       date: ""
     },
     {
-      title:'Summer Party Island', 
+      title:'', 
       image:'/assets/img/Roadmap/Roadmap_6.png', 
-      description: 'Celebration of our Mid-Roadmap birthday! 100% of the royalties given back to the community.',
-      date: "June 2022"
+      description: '',
+      date: ""
     },
     {
       title:'The Golden Sol rescue', 
@@ -58,7 +58,7 @@ export class RoadmapComponent implements OnInit {
     {
       title:'Blackmarket #2', 
       image:'/assets/img/Roadmap/Roadmap_9.png', 
-      description: 'The second Blackmarket is discovered! 5000 NFT Pirates Companions are available for adoption.',
+      description: 'The second Blackmarket is discovered, 5000 NFT Companions will be available for our fellow Crewmen (Pirates Del Sol NFT owners)!',
       date: "September 2022"
     },
     {

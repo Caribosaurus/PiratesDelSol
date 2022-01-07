@@ -11,8 +11,8 @@ export class OfferingComponent implements OnInit {
       title: "Monthly income Treasure Chest",
       icon: "/assets/icons/Treasure_chest.png",
       description: [
-        "Get access to a monthly treasure chest which is filled with 50% of the royalties.",
-        "Every Crewman has access to an equal part of the treasure chest riches."
+        " Get access to a monthly treasure chest which is filled with 50% to 100% of the monthly royalties depending on the month.",
+        "Every Crewman has access to an equal part of the treasure chest riches"
       ]
     },
     {
@@ -44,7 +44,7 @@ export class OfferingComponent implements OnInit {
       title: "Gamble your NFT's mini games",
       icon: "/assets/icons/Dice.png",
       description: [
-        "Get exclusive access to the Challenge Island were Crewmen can challenge each other by betting their NFT’s on a 50/50 chance."
+        "Anyone can gamble their Golden Tokens and NFTs in a casino fashion on The Challenge Island. Crewmen (NFT owners) and Sailors (Non-Owners) can challenge each other by betting their NFT’s on a 50/50 chance duel."
       ]
     },
     {

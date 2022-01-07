@@ -9,34 +9,49 @@ export class GalleryComponent implements OnInit {
 
   cards:Array<any> = [
     {
-      image: "/assets/img/gallery/1.png",
-      thumbnail:"/assets/img/gallery/Thumbnail/1.png",
+      image: "/assets/img/gallery/M7.png",
+      thumbnail:"/assets/img/gallery/M7.png",
       title: ""
     },
     {
-      image: "/assets/img/gallery/2.png",
-      thumbnail:"/assets/img/gallery/Thumbnail/2.png",
+      image: "/assets/img/gallery/M10.png",
+      thumbnail:"/assets/img/gallery/M10.png",
       title: ""
     },
     {
-      image: "/assets/img/gallery/3.png",
-      thumbnail:"/assets/img/gallery/Thumbnail/3.png",
+      image: "/assets/img/gallery/M11.png",
+      thumbnail:"/assets/img/gallery/M11.png",
       title: ""
     },
     {
-      image: "/assets/img/gallery/4.png",
-      thumbnail:"/assets/img/gallery/Thumbnail/4.png",
+      image: "/assets/img/gallery/M12.png",
+      thumbnail:"/assets/img/gallery/M12.png",
       title: ""
     },
     {
-      image: "/assets/img/gallery/5.png",
-      thumbnail:"/assets/img/gallery/Thumbnail/5.png",
+      image: "/assets/img/gallery/M18.png",
+      thumbnail:"/assets/img/gallery/M18.png",
+      title: ""
+    },
+    {
+      image: "/assets/img/gallery/M17.png",
+      thumbnail:"/assets/img/gallery/M17.png",
+      title: ""
+    },
+    {
+      image: "/assets/img/gallery/M16.png",
+      thumbnail:"/assets/img/gallery/M16.png",
       title: ""
     },
 
     {
-      image: "/assets/img/gallery/6.png",
-      thumbnail:"/assets/img/gallery/Thumbnail/6.png",
+      image: "/assets/img/gallery/M13.png",
+      thumbnail:"/assets/img/gallery/M13.png",
+      title: ""
+    },
+    {
+      image: "/assets/img/gallery/M9.png",
+      thumbnail:"/assets/img/gallery/M9.png",
       title: ""
     },
   ]

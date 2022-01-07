@@ -19,22 +19,22 @@ export class AuthenticationService {
 
 
   public login():Observable<User> {
-    return from(this.walletService.get_pubKey()).pipe(
-      switchMap(address => {
-        const options = address ?
-          { params: new HttpParams().set('address', address) } : {};
-        return this.http.get<{ nonce: string; exp: string }>(`${environment.apiUrl}/auth/nonce`, options);
-      }),
-      switchMap(nonce => this.walletService.signMessage(nonce.nonce)),
-      switchMap(signature => this.acquireToken(signature)),
-      map(tokenResponse => {
-        const user = jwt_decode(tokenResponse.token) as User;
-        user.token = tokenResponse.token;
-        localStorage.setItem("User", JSON.stringify(user));
-        return user ;
-      })
-    )
-
+    return from(this.walletService.get_pubKey())
+      .pipe(
+        switchMap(address => {
+          const options = address ?
+            { params: new HttpParams().set('address', address) } : {};
+          return this.http.get<{ nonce: string; exp: string }>(`${environment.apiUrl}/auth/nonce`, options);
+        }),
+        switchMap(nonce => this.walletService.signMessage(nonce.nonce)),
+        switchMap(signature => this.acquireToken(signature)),
+        map(tokenResponse => {
+          const user = jwt_decode(tokenResponse.token) as User;
+          user.token = tokenResponse.token;
+          localStorage.setItem("User", JSON.stringify(user));
+          return user ;
+        })
+      );
   }
 
   private acquireToken(signature: { signature: string, publicKey: string }) {
